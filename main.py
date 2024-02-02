@@ -19,11 +19,13 @@ def ask_for_folder(message):
 
 
 def compress_image(input_path, output_path):
-    # Compress an image by reducing its quality
-    with Image.open(input_path) as img:
-        if img.mode != 'RGB':
-            img = img.convert('RGB')
-        img.save(output_path, 'JPEG', quality=IMAGE_QUALITY)
+    try:
+        with Image.open(input_path) as img:
+            if img.mode != 'RGB':
+                img = img.convert('RGB')
+            img.save(output_path, 'JPEG', quality=IMAGE_QUALITY)
+    except OSError:
+        print(f"Skipping corrupted image: {input_path}")
 
 
 def compress_gif(input_path, output_path):
