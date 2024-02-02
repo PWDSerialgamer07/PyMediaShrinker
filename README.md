@@ -22,4 +22,4 @@ This script compresses images, GIFs, and videos in a given input directory and w
 ## Config
 You can set the config at the top of the script:
 ![image](https://github.com/PWDSerialgamer07/PyMediaShrinker/assets/118306463/8ea63401-6d2e-41d4-9535-8359b819dee8)
-They include the image quality (the lower the number, the worse it will be), the video bitrate and the name of the temporary folder.
+They include the image quality (the lower the number, the worse it will be), the video bitrate and the name of the temporary folder (which will be automatically created if missing).
